@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+:root {
+    --r: 15px;
+    --app-w: 600px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('sc/color-gradient-background-blur-glow-yellow-blue_279525-29150.JPEG') center;
+    background-size: cover;
+}
+
+.app {
+    color: #ffffb0;
+    background-color: #56563a;
+    width: var(--app-w);
+    border-radius: var(--r);
+    padding: 2rem;
+    box-shadow: 0 15px 40px -20px black;
+}
+
+.app h1 {
+    margin-top: 0px; 
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #ffff84;
+}
+
+.todo-input {
+    width: 100%;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: var(--r);
+    padding: 1rem 1.5rem;
+    font-size: 20px;
+    background-color: #f4f4f425;
+    columns: #fff;
+}
+
+.todo-input::placeholder {
+    color: #ffff70;
+}
+
+.todos, 
+.incompleted-todos,
+.completed-todos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.todo-item {
+    background-color: #f4f4f4bd;
+    padding: 1rem 1.5rem;
+    border-radius: var(--r);
+    box-shadow: 0 15ox 40px -20px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+}
+
+.todo-item span {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.todo-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--r);
+    accent-color: lime;
+}
+
+.todo-item a {
+    color: #555555;
+    transition: all 0.3s ease-in-out;
+}
+.todo-item a:hover {
+    color: #ffff70;
+    transition: all 0.3s ease-in-out;
+}
+
+.todo-item svg {
+    pointer-events: none;
+    width: 25px;
+    height: 25px;
+}
+
+.completed-todos .todo-item {
+    background-color: #74c674;
+    text-decoration: line-through;
+}
+
+.completed-title {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
